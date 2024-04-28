@@ -1,8 +1,9 @@
 package ru.kosti.lr5.util
 
+import ru.kosti.lr5.model.Edge
 import ru.kosti.lr5.model.Station
 
-fun find(stationA: Station, stationB: Station): Pair<Int?, List<Station>?> {
+fun find(stationA: Station, stationB: Station): Pair<Int?, List<Edge>?> {
     val visits = mutableMapOf<Station, Boolean>().also {
         stations.forEach { st ->
             it[st] = false
@@ -16,7 +17,7 @@ fun find(stationA: Station, stationB: Station): Pair<Int?, List<Station>?> {
                 it[st] = Int.MAX_VALUE
         }
     }
-    val previous = mutableMapOf<Station, Station>()
+    val previous = mutableMapOf<Station, Edge>()
     while (visits.containsValue(false)) {
         var minWeight = Int.MAX_VALUE
         lateinit var currentStation: Station
@@ -29,11 +30,11 @@ fun find(stationA: Station, stationB: Station): Pair<Int?, List<Station>?> {
             }
         }
         try {
-            for (st in edges[currentStation] ?: throw NullPointerException()) {
-                val newWeight = weights[st.stationA]!! + st.weight
-                if (newWeight < (weights[st.stationB] ?: Int.MAX_VALUE)) {
-                    weights[st.stationB] = newWeight
-                    previous[st.stationB] = st.stationA
+            for (edge in edges[currentStation] ?: throw NullPointerException()) {
+                val newWeight = weights[edge.stationA]!! + edge.weight
+                if (newWeight < (weights[edge.stationB] ?: Int.MAX_VALUE)) {
+                    weights[edge.stationB] = newWeight
+                    previous[edge.stationB] = edge
                 }
             }
             visits[currentStation] = true
@@ -41,15 +42,14 @@ fun find(stationA: Station, stationB: Station): Pair<Int?, List<Station>?> {
             return null to null
         }
     }
-    var path: List<Station>? = null
+    var path: List<Edge>? = null
     weights[stationB]?.let {
         var currentStation = stationB
-        path = mutableListOf<Station>()
+        path = mutableListOf<Edge>()
         while (currentStation != stationA) {
-            path = path!! + currentStation
-            currentStation = previous[currentStation] ?: break
+            path = path!! + previous[currentStation]!!
+            currentStation = previous[currentStation]!!.stationA
         }
-        path = path!! + stationA
         path = path!!.reversed()
     }
     return weights[stationB] to path
