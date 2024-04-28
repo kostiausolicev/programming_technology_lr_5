@@ -4,15 +4,56 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 
-<SplitPane dividerPositions="0.7850340136054422" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="711.0" prefWidth="879.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<SplitPane dividerPositions="0.6693877551020408" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="737.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
   <items>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="692.0" prefWidth="681.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="618.0" prefWidth="556.0">
          <children>
-            <Circle fill="DODGERBLUE" layoutX="82.0" layoutY="152.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="112.0" layoutY="185.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="150.0" layoutY="227.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="DODGERBLUE" layoutX="351.0" layoutY="282.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Line endX="-35.0" endY="42.0" layoutX="245.0" layoutY="323.0" startX="-98.0" startY="-1.0" stroke="#02a40c" strokeWidth="5.0" />
+            <Line endX="-40.0" layoutX="250.0" layoutY="226.0" startX="-100.0" style="-fx-effect: shadow;" />
+            <Line endX="-100.0" endY="338.0" layoutX="310.0" layoutY="73.0" startX="-100.0" stroke="BLUE" strokeWidth="5.0" />
+            <Line endX="-71.0" endY="33.0" layoutX="180.0" layoutY="151.0" startX="-100.0" stroke="#c60505" strokeWidth="5.0" />
+            <Line endX="100.0" layoutX="163.0" layoutY="473.0" startX="39.0" startY="-62.0" stroke="#02a40c" strokeWidth="5.0" />
+            <Line endX="-63.0" endY="41.0" layoutX="210.0" layoutY="185.0" startX="-100.0" stroke="#c60505" strokeWidth="5.0" />
+            <Line endX="-100.0" endY="47.0" layoutX="302.0" layoutY="364.0" startX="-100.0" stroke="#02a40c" strokeWidth="5.0" />
+            <Line endX="57.0" endY="57.0" layoutX="245.0" layoutY="226.0" startX="-100.0" stroke="#c60505" strokeWidth="5.0" />
+            <Ellipse fill="WHITE" layoutX="210.0" layoutY="365.0" radiusX="17.0" radiusY="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+            <Ellipse fill="WHITE" layoutX="210.0" layoutY="412.0" radiusX="17.0" radiusY="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+            <Circle id="greenfordStation" fill="RED" layoutX="79.0" layoutY="151.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle id="perivaleStation" fill="RED" layoutX="109.0" layoutY="184.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle id="hangerLaneStation" fill="RED" layoutX="147.0" layoutY="226.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle id="northActonStation" fill="RED" layoutX="302.0" layoutY="283.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle id="sourthHarrowStaion" fill="DODGERBLUE" layoutX="210.0" layoutY="74.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle id="sudburyHillStaion" fill="DODGERBLUE" layoutX="210.0" layoutY="120.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle id="alpertonStaion" fill="DODGERBLUE" layoutX="210.0" layoutY="168.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle id="royalParkStaion" fill="DODGERBLUE" layoutX="210.0" layoutY="226.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle id="northEarlingStation" fill="DODGERBLUE" layoutX="210.0" layoutY="297.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle id="earlingBroadwayStation" fill="#14ff00" layoutX="147.0" layoutY="322.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle id="earlingCommonGreen" fill="#14ff00" layoutX="202.0" layoutY="364.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle id="earlingCommonBlue" fill="DODGERBLUE" layoutX="218.0" layoutY="364.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle id="actonTownBlue" fill="DODGERBLUE" layoutX="218.0" layoutY="411.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle id="actonTownGreen" fill="#14ff00" layoutX="202.0" layoutY="411.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle id="chiswickParkStation" fill="#14ff00" layoutX="262.0" layoutY="473.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="92.0" layoutY="143.0" text="Greenfort" />
+            <Label layoutX="125.0" layoutY="176.0" text="Perivale" />
+            <Label layoutX="226.0" layoutY="66.0" text="Sourth Harrow" />
+            <Label layoutX="226.0" layoutY="112.0" text="Sudbury Hill" />
+            <Label layoutX="226.0" layoutY="160.0" text="Alperton" />
+            <Label layoutX="226.0" layoutY="218.0" text="Royal Park" />
+            <Label layoutX="319.0" layoutY="275.0" text="North Acton" />
+            <Label layoutX="280.0" layoutY="465.0" text="Chiswick Park" />
+            <Label layoutX="231.0" layoutY="403.0" text="Acton Town" />
+            <Label layoutX="231.0" layoutY="356.0" text="Earling Common" />
+            <Label layoutX="41.0" layoutY="314.0" text="Earling Broadway" />
+            <Label layoutX="62.0" layoutY="215.0" prefHeight="23.0" prefWidth="78.0" text="Hanger Lane" />
+            <Label layoutX="226.0" layoutY="289.0" text="North Earling" />
          </children></AnchorPane>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="566.0" prefWidth="250.0">
+         <children>
+            <Button layoutX="11.0" layoutY="136.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="218.0" text="Расчитать маршрут" />
+            <ListView layoutX="11.0" layoutY="168.0" prefHeight="387.0" prefWidth="218.0" />
+            <Label id="stationBStation" layoutX="14.0" layoutY="90.0" prefHeight="31.0" prefWidth="206.0" text="Конечная станция" />
+            <Label layoutX="14.0" layoutY="59.0" prefHeight="31.0" prefWidth="206.0" text="Начальная станция" />
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="206.0" text="Метро Лондона (участок)" />
+         </children></AnchorPane>
   </items>
 </SplitPane>
