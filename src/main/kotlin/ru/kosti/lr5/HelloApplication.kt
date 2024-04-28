@@ -13,7 +13,7 @@ class HelloApplication : Application() {
         initialize()
         val a = stations[0]
         val b = stations[4]
-        println(find(stationA = a, stationB = b))
+        val res = find(stationA = a, stationB = b)
         val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("hello-view.fxml"))
         val scene = Scene(fxmlLoader.load(), 320.0, 240.0)
         stage.title = "Hello!"

@@ -1,9 +1,8 @@
 package ru.kosti.lr5.util
 
 import ru.kosti.lr5.model.Station
-import kotlin.math.min
 
-fun find(stationA: Station, stationB: Station): Int? {
+fun find(stationA: Station, stationB: Station): Pair<Int?, List<Station>?> {
     val visits = mutableMapOf<Station, Boolean>().also {
         stations.forEach { st ->
             it[st] = false
@@ -17,6 +16,7 @@ fun find(stationA: Station, stationB: Station): Int? {
                 it[st] = Int.MAX_VALUE
         }
     }
+    val previous = mutableMapOf<Station, Station>()
     while (visits.containsValue(false)) {
         var minWeight = Int.MAX_VALUE
         lateinit var currentStation: Station
@@ -30,12 +30,27 @@ fun find(stationA: Station, stationB: Station): Int? {
         }
         try {
             for (st in edges[currentStation] ?: throw NullPointerException()) {
-                weights[st.stationB] = min(weights[st.stationA]!! + st.weight, weights[stationB]!!)
+                val newWeight = weights[st.stationA]!! + st.weight
+                if (newWeight < (weights[st.stationB] ?: Int.MAX_VALUE)) {
+                    weights[st.stationB] = newWeight
+                    previous[st.stationB] = st.stationA
+                }
             }
             visits[currentStation] = true
         } catch (ex: NullPointerException) {
-            return null
+            return null to null
         }
     }
-    return weights[stationB]
+    var path: List<Station>? = null
+    weights[stationB]?.let {
+        var currentStation = stationB
+        path = mutableListOf<Station>()
+        while (currentStation != stationA) {
+            path = path!! + currentStation
+            currentStation = previous[currentStation] ?: break
+        }
+        path = path!! + stationA
+        path = path!!.reversed()
+    }
+    return weights[stationB] to path
 }
