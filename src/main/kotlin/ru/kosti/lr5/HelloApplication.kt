@@ -4,18 +4,13 @@ import javafx.application.Application
 import javafx.fxml.FXMLLoader
 import javafx.scene.Scene
 import javafx.stage.Stage
-import ru.kosti.lr5.util.find
 import ru.kosti.lr5.util.initialize
-import ru.kosti.lr5.util.stations
 
 class HelloApplication : Application() {
     override fun start(stage: Stage) {
         initialize()
-        val a = stations[0]
-        val b = stations[4]
-        val res = find(stationA = a, stationB = b)
         val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("hello-view.fxml"))
-        val scene = Scene(fxmlLoader.load(), 520.0, 440.0)
+        val scene = Scene(fxmlLoader.load(), 880.0, 580.0)
         stage.title = "Hello!"
         stage.scene = scene
         stage.show()
