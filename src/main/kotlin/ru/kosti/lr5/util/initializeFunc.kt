@@ -36,7 +36,7 @@ fun initialize() {
         stationsMap[it.name] = it
         stations.add(it)
     }
-    Edge(stationA = greenford, stationB = perivale, weight = 3, type = EdgeType.TRAIN).also {
+    Edge(stationA = greenford, stationB = perivale, weight = 4, type = EdgeType.TRAIN).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else
@@ -54,25 +54,25 @@ fun initialize() {
         else
             edges[it.stationA] = mutableListOf(it)
     }
-    Edge(stationA = perivale, stationB = greenford, weight = 3, type = EdgeType.TRAIN).also {
+    Edge(stationA = perivale, stationB = greenford, weight = 2, type = EdgeType.TRAIN).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else
             edges[it.stationA] = mutableListOf(it)
     }
-    Edge(stationA = hangerLane, stationB = perivale, weight = 3, type = EdgeType.TRAIN).also {
+    Edge(stationA = hangerLane, stationB = perivale, weight = 5, type = EdgeType.TRAIN).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else
             edges[it.stationA] = mutableListOf(it)
     }
-    Edge(stationA = nortActon, stationB = hangerLane, weight = 3, type = EdgeType.TRAIN).also {
+    Edge(stationA = nortActon, stationB = hangerLane, weight = 4, type = EdgeType.TRAIN).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else
             edges[it.stationA] = mutableListOf(it)
     }
-    Edge(stationA = nortActon, stationB = westActon, weight = 3, type = EdgeType.TRAIN).also {
+    Edge(stationA = nortActon, stationB = westActon, weight = 2, type = EdgeType.TRAIN).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else
@@ -127,13 +127,13 @@ fun initialize() {
         stations.add(it)
     }
 
-    Edge(stationA = southHarrow, stationB = sudburyHill, weight = 3, type = EdgeType.TRAIN).also {
+    Edge(stationA = southHarrow, stationB = sudburyHill, weight = 5, type = EdgeType.TRAIN).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else
             edges[it.stationA] = mutableListOf(it)
     }
-    Edge(stationA = sudburyHill, stationB = alperton, weight = 3, type = EdgeType.TRAIN).also {
+    Edge(stationA = sudburyHill, stationB = alperton, weight = 5, type = EdgeType.TRAIN).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else
@@ -145,7 +145,7 @@ fun initialize() {
         else
             edges[it.stationA] = mutableListOf(it)
     }
-    Edge(stationA = parkRoyal, stationB = northEarling, weight = 3, type = EdgeType.TRAIN).also {
+    Edge(stationA = parkRoyal, stationB = northEarling, weight = 2, type = EdgeType.TRAIN).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else
@@ -163,7 +163,7 @@ fun initialize() {
         else
             edges[it.stationA] = mutableListOf(it)
     }
-    Edge(stationA = sudburyHill, stationB = southHarrow, weight = 3, type = EdgeType.TRAIN).also {
+    Edge(stationA = sudburyHill, stationB = southHarrow, weight = 4, type = EdgeType.TRAIN).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else
@@ -193,7 +193,7 @@ fun initialize() {
         else
             edges[it.stationA] = mutableListOf(it)
     }
-    Edge(stationA = actonTownBlue, stationB = earlingCommonBlue, weight = 3, type = EdgeType.TRAIN).also {
+    Edge(stationA = actonTownBlue, stationB = earlingCommonBlue, weight = 2, type = EdgeType.TRAIN).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else
@@ -235,7 +235,7 @@ fun initialize() {
         else
             edges[it.stationA] = mutableListOf(it)
     }
-    Edge(stationA = earlingCommonGreen, stationB = ealingBroadwayGreen, weight = 3, type = EdgeType.TRAIN).also {
+    Edge(stationA = earlingCommonGreen, stationB = ealingBroadwayGreen, weight = 4, type = EdgeType.TRAIN).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else
@@ -261,13 +261,13 @@ fun initialize() {
         else
             edges[it.stationA] = mutableListOf(it)
     }
-    Edge(stationA = parkRoyal, stationB = hangerLane, weight = 1, type = EdgeType.WALK).also {
+    Edge(stationA = parkRoyal, stationB = hangerLane, weight = 2, type = EdgeType.WALK).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else
             edges[it.stationA] = mutableListOf(it)
     }
-    Edge(stationA = earlingCommonGreen, stationB = earlingCommonBlue, weight = 1, type = EdgeType.WALK).also {
+    Edge(stationA = earlingCommonGreen, stationB = earlingCommonBlue, weight = 2, type = EdgeType.WALK).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else
@@ -285,7 +285,7 @@ fun initialize() {
         else
             edges[it.stationA] = mutableListOf(it)
     }
-    Edge(stationA = actonTownBlue, stationB = actonTownGreen, weight = 1, type = EdgeType.WALK).also {
+    Edge(stationA = actonTownBlue, stationB = actonTownGreen, weight = 2, type = EdgeType.WALK).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else
@@ -297,7 +297,7 @@ fun initialize() {
         else
             edges[it.stationA] = mutableListOf(it)
     }
-    Edge(stationA = ealingBroadwayRed, stationB = ealingBroadwayGreen, weight = 1, type = EdgeType.WALK).also {
+    Edge(stationA = ealingBroadwayRed, stationB = ealingBroadwayGreen, weight = 3, type = EdgeType.WALK).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else
