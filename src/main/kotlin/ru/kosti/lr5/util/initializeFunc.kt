@@ -6,16 +6,36 @@ import ru.kosti.lr5.model.Edge
 import ru.kosti.lr5.model.Station
 
 val stations: MutableList<Station> = mutableListOf()
+val stationsMap: MutableMap<String, Station> = mutableMapOf()
 val edges: MutableMap<Station, MutableList<Edge>> = mutableMapOf()
 
 fun initialize() {
     // Red line
-    val greenford = Station(name = "Greenford", line = LineEnum.RED).also { stations.add(it) }
-    val perivale = Station(name = "Perivale", line = LineEnum.RED).also { stations.add(it) }
-    val hangerLane = Station(name = "Hanger Lane", line = LineEnum.RED).also { stations.add(it) }
-    val nortActon = Station(name = "North Acton", line = LineEnum.RED).also { stations.add(it) }
-    val ealingBroadwayRed = Station(name = "Earling Broadway", line = LineEnum.RED).also { stations.add(it) }
-    val westActon = Station(name = "West Acton", line = LineEnum.RED).also { stations.add(it) }
+    val greenford = Station(name = "Greenford", line = LineEnum.RED).also {
+        stationsMap[it.name] = it
+        stations.add(it)
+    }
+
+    val perivale = Station(name = "Perivale", line = LineEnum.RED).also {
+        stationsMap[it.name] = it
+        stations.add(it)
+    }
+    val hangerLane = Station(name = "Hanger Lane", line = LineEnum.RED).also {
+        stationsMap[it.name] = it
+        stations.add(it)
+    }
+    val nortActon = Station(name = "North Acton", line = LineEnum.RED).also {
+        stationsMap[it.name] = it
+        stations.add(it)
+    }
+    val ealingBroadwayRed = Station(name = "Earling Broadway", line = LineEnum.RED).also {
+        stationsMap[it.name] = it
+        stations.add(it)
+    }
+    val westActon = Station(name = "West Acton", line = LineEnum.RED).also {
+        stationsMap[it.name] = it
+        stations.add(it)
+    }
     Edge(stationA = greenford, stationB = perivale, weight = 3, type = EdgeType.TRAIN).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
@@ -78,12 +98,34 @@ fun initialize() {
     }
 
     // Blue line
-    val southHarrow = Station(name = "South Harrow", line = LineEnum.BLUE).also { stations.add(it) }
-    val sudburyHill = Station(name = "Sudbury Hill", line = LineEnum.BLUE).also { stations.add(it) }
-    val alperton = Station(name = "Alperton", line = LineEnum.BLUE).also { stations.add(it) }
-    val parkRoyal = Station(name = "Park Royal", line = LineEnum.BLUE).also { stations.add(it) }
-    val earlingCommonBlue = Station(name = "Earling Common", line = LineEnum.BLUE).also { stations.add(it) }
-    val actonTownBlue = Station(name = "Acton Town", line = LineEnum.BLUE).also { stations.add(it) }
+    val southHarrow = Station(name = "South Harrow", line = LineEnum.BLUE).also {
+        stationsMap[it.name] = it
+        stations.add(it)
+    }
+    val sudburyHill = Station(name = "Sudbury Hill", line = LineEnum.BLUE).also {
+        stationsMap[it.name] = it
+        stations.add(it)
+    }
+    val alperton = Station(name = "Alperton", line = LineEnum.BLUE).also {
+        stationsMap[it.name] = it
+        stations.add(it)
+    }
+    val parkRoyal = Station(name = "Royal Park", line = LineEnum.BLUE).also {
+        stationsMap[it.name] = it
+        stations.add(it)
+    }
+    val earlingCommonBlue = Station(name = "Earling Common", line = LineEnum.BLUE).also {
+        stationsMap[it.name] = it
+        stations.add(it)
+    }
+    val actonTownBlue = Station(name = "Acton Town", line = LineEnum.BLUE).also {
+        stationsMap[it.name] = it
+        stations.add(it)
+    }
+    val northEarling = Station(name = "North Earling", line = LineEnum.BLUE).also {
+        stationsMap[it.name] = it
+        stations.add(it)
+    }
 
     Edge(stationA = southHarrow, stationB = sudburyHill, weight = 3, type = EdgeType.TRAIN).also {
         if (edges.containsKey(it.stationA))
@@ -103,7 +145,13 @@ fun initialize() {
         else
             edges[it.stationA] = mutableListOf(it)
     }
-    Edge(stationA = parkRoyal, stationB = earlingCommonBlue, weight = 3, type = EdgeType.TRAIN).also {
+    Edge(stationA = parkRoyal, stationB = northEarling, weight = 3, type = EdgeType.TRAIN).also {
+        if (edges.containsKey(it.stationA))
+            edges[it.stationA]!!.add(it)
+        else
+            edges[it.stationA] = mutableListOf(it)
+    }
+    Edge(stationA = northEarling, stationB = earlingCommonBlue, weight = 3, type = EdgeType.TRAIN).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else
@@ -133,7 +181,13 @@ fun initialize() {
         else
             edges[it.stationA] = mutableListOf(it)
     }
-    Edge(stationA = earlingCommonBlue, stationB = parkRoyal, weight = 3, type = EdgeType.TRAIN).also {
+    Edge(stationA = northEarling, stationB = parkRoyal, weight = 3, type = EdgeType.TRAIN).also {
+        if (edges.containsKey(it.stationA))
+            edges[it.stationA]!!.add(it)
+        else
+            edges[it.stationA] = mutableListOf(it)
+    }
+    Edge(stationA = earlingCommonBlue, stationB = northEarling, weight = 3, type = EdgeType.TRAIN).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else
@@ -147,10 +201,22 @@ fun initialize() {
     }
 
     // Green line
-    val ealingBroadwayGreen = Station(name = "Ealing Broadway", line = LineEnum.GREEN).also { stations.add(it) }
-    val earlingCommonGreen = Station(name = "Earling Common", line = LineEnum.GREEN).also { stations.add(it) }
-    val actonTownGreen = Station(name = "Acton Town", line = LineEnum.GREEN).also { stations.add(it) }
-    val chiswickPark = Station(name = "Chiswick Park", line = LineEnum.GREEN).also { stations.add(it) }
+    val ealingBroadwayGreen = Station(name = "Ealing Broadway", line = LineEnum.GREEN).also {
+        stationsMap[it.name] = it
+        stations.add(it)
+    }
+    val earlingCommonGreen = Station(name = "Earling Common", line = LineEnum.GREEN).also {
+        stationsMap[it.name] = it
+        stations.add(it)
+    }
+    val actonTownGreen = Station(name = "Acton Town", line = LineEnum.GREEN).also {
+        stationsMap[it.name] = it
+        stations.add(it)
+    }
+    val chiswickPark = Station(name = "Chiswick Park", line = LineEnum.GREEN).also {
+        stationsMap[it.name] = it
+        stations.add(it)
+    }
     Edge(stationA = ealingBroadwayGreen, stationB = earlingCommonGreen, weight = 3, type = EdgeType.TRAIN).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)

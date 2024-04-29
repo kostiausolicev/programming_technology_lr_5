@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 
-<SplitPane dividerPositions="0.6693877551020408" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="853.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.kosti.lr5.presenter.MainPresenter">
+<SplitPane dividerPositions="0.5739570164348925" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.kosti.lr5.presenter.MainPresenter">
   <items>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="618.0" prefWidth="556.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="566.0" prefWidth="463.0">
          <children>
             <Line endX="100.0" layoutX="205.0" layoutY="284.0" startX="-25.0" stroke="#c60505" strokeWidth="5.0" />
             <Line endX="-35.0" endY="42.0" layoutX="245.0" layoutY="323.0" startX="-112.0" startY="-26.0" stroke="#02a40c" strokeWidth="5.0" />
@@ -21,100 +21,100 @@
             <Line endX="100.0" layoutX="77.0" layoutY="283.0" startX="48.0" startY="3.0" stroke="#c60505" strokeWidth="5.0" />
             <Ellipse fill="WHITE" layoutX="210.0" layoutY="365.0" radiusX="17.0" radiusY="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
             <Ellipse fill="WHITE" layoutX="210.0" layoutY="412.0" radiusX="17.0" radiusY="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+            <Group layoutX="180.0" layoutY="283.0" onMousePressed="#updateLables">
+               <children>
+                  <Circle fill="RED" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label layoutX="-51.0" layoutY="-29.0" text="West Acton" />
+               </children>
+            </Group>
             <Group layoutX="76.0" layoutY="147.0" onMousePressed="#updateLables">
                <children>
-                  <Label layoutX="17.0" layoutY="-8.0" text="Greenfort" />
-                  <Circle fx:id="greenfordStation" fill="RED" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label layoutX="17.0" layoutY="-8.0" text="Greenford" />
+                  <Circle id="greenfordStation" fill="RED" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
                </children>
             </Group>
             <Group layoutX="109.0" layoutY="184.0" onMousePressed="#updateLables">
                <children>
-                  <Circle fx:id="perivaleStation" fill="RED" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle id="perivaleStation" fill="RED" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
                   <Label layoutX="17.0" layoutY="-8.0" text="Perivale" />
                </children>
             </Group>
             <Group layoutX="147.0" layoutY="227.0" onMousePressed="#updateLables">
                <children>
-                  <Circle fx:id="hangerLaneStation" fill="RED" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle id="hangerLaneStation" fill="RED" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
                   <Label layoutX="-79.0" layoutY="-25.0" prefHeight="46.0" prefWidth="96.0" text="Hanger Lane" />
                </children>
             </Group>
             <Group layoutX="302.0" layoutY="283.0" onMousePressed="#updateLables">
                <children>
-                  <Circle fx:id="northActonStation" fill="RED" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle id="northActonStation" fill="RED" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
                   <Label layoutX="14.0" layoutY="-8.0" text="North Acton" />
                </children>
             </Group>
             <Group layoutX="211.0" layoutY="74.0" onMousePressed="#updateLables">
                <children>
-                  <Circle fx:id="sourthHarrowStaion" fill="DODGERBLUE" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Label layoutX="17.0" layoutY="-8.0" text="Sourth Harrow" />
+                  <Circle id="sourthHarrowStaion" fill="DODGERBLUE" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label layoutX="17.0" layoutY="-8.0" text="South Harrow" />
                </children>
             </Group>
             <Group layoutX="211.0" layoutY="121.0" onMousePressed="#updateLables">
                <children>
-                  <Circle fx:id="sudburyHillStaion" fill="DODGERBLUE" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle id="sudburyHillStaion" fill="DODGERBLUE" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
                   <Label layoutX="18.0" layoutY="-8.0" text="Sudbury Hill" />
                </children>
             </Group>
             <Group layoutX="211.0" layoutY="169.0" onMousePressed="#updateLables">
                <children>
-                  <Circle fx:id="alpertonStaion" fill="DODGERBLUE" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle id="alpertonStaion" fill="DODGERBLUE" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
                   <Label layoutX="19.0" layoutY="-8.0" text="Alperton" />
                </children>
             </Group>
             <Group layoutX="211.0" layoutY="227.0" onMousePressed="#updateLables">
                <children>
-                  <Circle fx:id="royalParkStaion" fill="DODGERBLUE" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle id="royalParkStaion" fill="DODGERBLUE" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
                   <Label layoutX="17.0" layoutY="-8.0" text="Royal Park" />
                </children>
             </Group>
             <Group layoutX="124.0" layoutY="295.0" onMousePressed="#updateLables">
                <children>
                   <Ellipse fill="WHITE" layoutY="-4.0" radiusX="11.0" radiusY="16.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
-                  <Circle fx:id="earlingBroadwayStation" fill="#14ff00" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle id="earlingBroadwayStation" fill="#14ff00" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
                   <Label layoutX="-108.0" layoutY="-11.0" text="Earling Broadway" />
                   <Circle fill="RED" layoutY="-8.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
                </children>
             </Group>
             <Group layoutX="210.0" layoutY="298.0" onMousePressed="#updateLables">
                <children>
-                  <Circle fx:id="northEarlingStation" fill="DODGERBLUE" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle id="northEarlingStation" fill="DODGERBLUE" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
                   <Label layoutX="16.0" layoutY="-4.0" text="North Earling" />
                </children>
             </Group>
             <Group layoutX="263.0" layoutY="474.0" onMousePressed="#updateLables">
                <children>
-                  <Circle fx:id="chiswickParkStation" fill="#14ff00" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle id="chiswickParkStation" fill="#14ff00" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
                   <Label layoutX="14.0" layoutY="-8.0" text="Chiswick Park" />
                </children>
             </Group>
             <Group layoutX="210.0" layoutY="365.0" onMousePressed="#updateLables">
                <children>
-                  <Circle fx:id="earlingCommonGreen" fill="#14ff00" layoutX="-6.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fx:id="earlingCommonBlue" fill="DODGERBLUE" layoutX="6.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle id="earlingCommonGreen" fill="#14ff00" layoutX="-6.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle id="earlingCommonBlue" fill="DODGERBLUE" layoutX="6.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
                   <Label layoutX="22.0" layoutY="-8.0" text="Earling Common" />
                </children>
             </Group>
             <Group layoutX="203.0" layoutY="414.0" onMousePressed="#updateLables">
                <children>
-                  <Circle fx:id="actonTownGreen" fill="#14ff00" layoutX="1.0" layoutY="-2.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Circle fx:id="actonTownBlue" fill="DODGERBLUE" layoutX="13.0" layoutY="-2.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle id="actonTownGreen" fill="#14ff00" layoutX="1.0" layoutY="-2.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle id="actonTownBlue" fill="DODGERBLUE" layoutX="13.0" layoutY="-2.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
                   <Label layoutX="31.0" layoutY="-11.0" text="Acton Town" />
                </children>
 
             </Group>
-            <Group layoutX="180.0" layoutY="283.0">
-               <children>
-                  <Circle fill="RED" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Label layoutX="-51.0" layoutY="-29.0" text="West Acton" />
-               </children>
-            </Group>
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="566.0" prefWidth="250.0">
          <children>
-            <Button fx:id="createWayButton" layoutX="10.0" layoutY="137.0" mnemonicParsing="false" onAction="#createWayButttonActive" prefHeight="25.0" prefWidth="259.0" text="Расчитать маршрут" />
-            <ListView fx:id="listview" layoutX="10.0" layoutY="165.0" prefHeight="387.0" prefWidth="259.0" />
+            <Button fx:id="createWayButton" layoutX="9.0" layoutY="129.0" mnemonicParsing="false" onAction="#createWayButttonActive" prefHeight="25.0" prefWidth="315.0" text="Расчитать маршрут" />
+            <ListView fx:id="listview" layoutX="9.0" layoutY="162.0" prefHeight="387.0" prefWidth="315.0" />
             <Label fx:id="stationB" layoutX="14.0" layoutY="90.0" prefHeight="31.0" prefWidth="206.0" text="Конечная станция:" />
             <Label fx:id="stationA" layoutX="14.0" layoutY="59.0" prefHeight="31.0" prefWidth="206.0" text="Начальная станция:" />
             <Label layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="206.0" text="Метро Лондона (участок)" />
