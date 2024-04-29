@@ -14,6 +14,8 @@ fun initialize() {
     val perivale = Station(name = "Perivale", line = LineEnum.RED).also { stations.add(it) }
     val hangerLane = Station(name = "Hanger Lane", line = LineEnum.RED).also { stations.add(it) }
     val nortActon = Station(name = "North Acton", line = LineEnum.RED).also { stations.add(it) }
+    val ealingBroadwayRed = Station(name = "Earling Broadway", line = LineEnum.RED).also { stations.add(it) }
+    val westActon = Station(name = "West Acton", line = LineEnum.RED).also { stations.add(it) }
     Edge(stationA = greenford, stationB = perivale, weight = 3, type = EdgeType.TRAIN).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
@@ -45,6 +47,30 @@ fun initialize() {
             edges[it.stationA] = mutableListOf(it)
     }
     Edge(stationA = nortActon, stationB = hangerLane, weight = 3, type = EdgeType.TRAIN).also {
+        if (edges.containsKey(it.stationA))
+            edges[it.stationA]!!.add(it)
+        else
+            edges[it.stationA] = mutableListOf(it)
+    }
+    Edge(stationA = nortActon, stationB = westActon, weight = 3, type = EdgeType.TRAIN).also {
+        if (edges.containsKey(it.stationA))
+            edges[it.stationA]!!.add(it)
+        else
+            edges[it.stationA] = mutableListOf(it)
+    }
+    Edge(stationA = westActon, stationB = nortActon, weight = 3, type = EdgeType.TRAIN).also {
+        if (edges.containsKey(it.stationA))
+            edges[it.stationA]!!.add(it)
+        else
+            edges[it.stationA] = mutableListOf(it)
+    }
+    Edge(stationA = westActon, stationB = ealingBroadwayRed, weight = 3, type = EdgeType.TRAIN).also {
+        if (edges.containsKey(it.stationA))
+            edges[it.stationA]!!.add(it)
+        else
+            edges[it.stationA] = mutableListOf(it)
+    }
+    Edge(stationA = ealingBroadwayRed, stationB = westActon, weight = 3, type = EdgeType.TRAIN).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else
@@ -121,11 +147,11 @@ fun initialize() {
     }
 
     // Green line
-    val ealingBroadway = Station(name = "Ealing Broadway", line = LineEnum.GREEN).also { stations.add(it) }
+    val ealingBroadwayGreen = Station(name = "Ealing Broadway", line = LineEnum.GREEN).also { stations.add(it) }
     val earlingCommonGreen = Station(name = "Earling Common", line = LineEnum.GREEN).also { stations.add(it) }
     val actonTownGreen = Station(name = "Acton Town", line = LineEnum.GREEN).also { stations.add(it) }
     val chiswickPark = Station(name = "Chiswick Park", line = LineEnum.GREEN).also { stations.add(it) }
-    Edge(stationA = ealingBroadway, stationB = earlingCommonGreen, weight = 3, type = EdgeType.TRAIN).also {
+    Edge(stationA = ealingBroadwayGreen, stationB = earlingCommonGreen, weight = 3, type = EdgeType.TRAIN).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else
@@ -143,7 +169,7 @@ fun initialize() {
         else
             edges[it.stationA] = mutableListOf(it)
     }
-    Edge(stationA = earlingCommonGreen, stationB = ealingBroadway, weight = 3, type = EdgeType.TRAIN).also {
+    Edge(stationA = earlingCommonGreen, stationB = ealingBroadwayGreen, weight = 3, type = EdgeType.TRAIN).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else
@@ -194,6 +220,18 @@ fun initialize() {
             edges[it.stationA] = mutableListOf(it)
     }
     Edge(stationA = actonTownBlue, stationB = actonTownGreen, weight = 1, type = EdgeType.WALK).also {
+        if (edges.containsKey(it.stationA))
+            edges[it.stationA]!!.add(it)
+        else
+            edges[it.stationA] = mutableListOf(it)
+    }
+    Edge(stationA = ealingBroadwayGreen, stationB = ealingBroadwayRed, weight = 1, type = EdgeType.WALK).also {
+        if (edges.containsKey(it.stationA))
+            edges[it.stationA]!!.add(it)
+        else
+            edges[it.stationA] = mutableListOf(it)
+    }
+    Edge(stationA = ealingBroadwayRed, stationB = ealingBroadwayGreen, weight = 1, type = EdgeType.WALK).also {
         if (edges.containsKey(it.stationA))
             edges[it.stationA]!!.add(it)
         else

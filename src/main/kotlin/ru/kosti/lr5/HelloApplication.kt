@@ -15,7 +15,7 @@ class HelloApplication : Application() {
         val b = stations[4]
         val res = find(stationA = a, stationB = b)
         val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("hello-view.fxml"))
-        val scene = Scene(fxmlLoader.load(), 320.0, 240.0)
+        val scene = Scene(fxmlLoader.load(), 520.0, 440.0)
         stage.title = "Hello!"
         stage.scene = scene
         stage.show()
